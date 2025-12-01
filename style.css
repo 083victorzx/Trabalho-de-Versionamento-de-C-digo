@@ -22,3 +22,23 @@ body {
   padding: 0 10px;
   border-bottom: 1px solid #3c3c3c;
 }
+
+#buttons button {
+  margin-right: 6px;
+  padding: 4px 10px;
+  background: #3a3a3a;
+  color: #eaeaea;
+  border: 1px solid #3c3c3c;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#buttons button:hover {
+  background: #444;
+}
+
+#fileName {
+  font-size: 12px;
+  opacity: 0.8;
+}
