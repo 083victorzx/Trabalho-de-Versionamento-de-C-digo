@@ -1,0 +1,21 @@
+{
+  "name": "projetomizera",
+  "version": "1.0.0",
+  "description": "Editor de texto simples com Electron",
+  "main": "main.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^39.2.4"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.2",
+    "electron-store": "^8.1.0",
+    "file-type": "^16.5.4"
+  }
+}
