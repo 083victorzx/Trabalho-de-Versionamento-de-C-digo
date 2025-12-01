@@ -23,3 +23,41 @@ function updateFileName() {
     fileNameLabel.textContent = parts[parts.length - 1];
   }
 }
+
+// ---------- BOTÃO: NOVO ----------
+btnNew.onclick = () => {
+  currentFilePath = null;
+  editor.value = "";
+  updateFileName();
+  setStatus("Novo arquivo");
+};
+
+// ---------- BOTÃO: ABRIR ----------
+btnOpen.onclick = async () => {
+  const result = await window.api.openFile();
+  if (!result || result.canceled) {
+    setStatus("Abertura cancelada");
+    return;
+  }
+
+  currentFilePath = result.filePath;
+  editor.value = result.content;
+  updateFileName();
+  setStatus("Arquivo aberto");
+};
+
+// ---------- BOTÃO: SALVAR ----------
+btnSave.onclick = async () => {
+  if (!currentFilePath) {
+    // se ainda não tem caminho, chama Salvar Como
+    await handleSaveAs();
+    return;
+  }
+
+  const res = await window.api.saveFile(currentFilePath, editor.value);
+  if (res && res.success) {
+    setStatus("Arquivo salvo");
+  } else {
+    setStatus("Erro ao salvar");
+  }
+};
