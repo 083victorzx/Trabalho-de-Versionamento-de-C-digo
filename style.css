@@ -42,3 +42,25 @@ body {
   font-size: 12px;
   opacity: 0.8;
 }
+
+#editor {
+  flex: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #1e1e1e;
+  color: #f0f0f0;
+  padding: 12px;
+  font-size: 15px;
+  font-family: Consolas, "Courier New", monospace;
+  resize: none;
+}
+
+#status {
+  height: 22px;
+  background: #252526;
+  color: #c0c0c0;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-top: 1px solid #3c3c3c;
+}
