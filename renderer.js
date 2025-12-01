@@ -61,6 +61,7 @@ btnSave.onclick = async () => {
     setStatus("Erro ao salvar");
   }
 };
+
 // ---------- Função auxiliar: SALVAR COMO ----------
 async function handleSaveAs() {
   const res = await window.api.saveFileAs(editor.value);
