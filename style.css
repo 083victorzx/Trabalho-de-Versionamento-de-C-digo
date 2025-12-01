@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#topbar {
+  height: 40px;
+  background: #252526;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-bottom: 1px solid #3c3c3c;
+}
