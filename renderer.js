@@ -61,3 +61,29 @@ btnSave.onclick = async () => {
     setStatus("Erro ao salvar");
   }
 };
+// ---------- Função auxiliar: SALVAR COMO ----------
+async function handleSaveAs() {
+  const res = await window.api.saveFileAs(editor.value);
+  if (!res || res.canceled) {
+    setStatus("Salvar como cancelado");
+    return;
+  }
+
+  currentFilePath = res.filePath;
+  updateFileName();
+  setStatus("Arquivo salvo como");
+}
+
+// ---------- BOTÃO: SALVAR COMO ----------
+btnSaveAs.onclick = async () => {
+  await handleSaveAs();
+};
+
+// ---------- BOTÃO: SAIR ----------
+btnExit.onclick = () => {
+  window.api.quit();
+};
+
+// inicializa o texto da barra
+updateFileName();
+setStatus("Pronto");
