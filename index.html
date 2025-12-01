@@ -1,9 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Editor Pro</title>
+  <meta charset="UTF-8" />
+  <title>Editor Pro</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <div id="topbar">
+    <div id="buttons">
+      <button id="btnNew">Novo</button>
+      <button id="btnOpen">Abrir</button>
+      <button id="btnSave">Salvar</button>
+      <button id="btnSaveAs">Salvar como</button>
+      <button id="btnExit">Sair</button>
+    </div>
+    <div id="fileName">Nenhum arquivo aberto</div>
+  </div>
+
+  <textarea id="editor" spellcheck="false"></textarea>
+
+  <div id="status">Pronto</div>
+
+  <script src="renderer.js"></script>
 </body>
 </html>
